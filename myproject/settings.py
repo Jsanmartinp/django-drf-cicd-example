@@ -143,7 +143,8 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-STATIC_URL = "/static/"
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Define la ruta absoluta
 # This production code might break development mode, so we check whether we're in DEBUG mode
 if (
     not DEBUG
